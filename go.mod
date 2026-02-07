@@ -111,6 +111,7 @@ require (
 	github.com/openbao/go-kms-wrapping/wrappers/ocikms/v2 v2.2.0
 	github.com/openbao/go-kms-wrapping/wrappers/pkcs11/v2 v2.5.1
 	github.com/openbao/go-kms-wrapping/wrappers/static/v2 v2.1.1
+	github.com/openbao/go-kms-wrapping/wrappers/tencentcloudkms/v2 v2.2.0
 	github.com/openbao/go-kms-wrapping/wrappers/transit/v2 v2.7.0
 	github.com/openbao/openbao-template v1.0.1
 	github.com/openbao/openbao/api/auth/approle/v2 v2.0.0
@@ -345,8 +346,9 @@ require (
 	github.com/spf13/pflag v1.0.10 // indirect
 	github.com/stoewer/go-strcase v1.3.0 // indirect
 	github.com/stretchr/objx v0.5.2 // indirect
-	github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/common v1.0.480 // indirect
+	github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/common v1.0.604 // indirect
 	github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/cvm v1.0.480 // indirect
+	github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/kms v1.0.604 // indirect
 	github.com/tilinna/clock v1.0.2 // indirect
 	github.com/tklauser/go-sysconf v0.3.16 // indirect
 	github.com/tklauser/numcpus v0.11.0 // indirect

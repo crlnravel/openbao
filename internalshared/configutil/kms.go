@@ -25,6 +25,7 @@ import (
 	"github.com/openbao/go-kms-wrapping/wrappers/kmip/v2"
 	"github.com/openbao/go-kms-wrapping/wrappers/ocikms/v2"
 	statickms "github.com/openbao/go-kms-wrapping/wrappers/static/v2"
+	"github.com/openbao/go-kms-wrapping/wrappers/tencentcloudkms/v2"
 	"github.com/openbao/go-kms-wrapping/wrappers/transit/v2"
 	"github.com/openbao/openbao/sdk/v2/helper/hclutil"
 	"github.com/openbao/openbao/sdk/v2/logical"
@@ -193,6 +194,9 @@ func configureWrapper(configKMS *KMS, infoKeys *[]string, info *map[string]strin
 		}
 		wrapper, kmsInfo, err = GetOCIKMSKMSFunc(configKMS, opts...)
 
+	case wrapping.WrapperTypeTencentCloudKms:
+		wrapper, kmsInfo, err = GetTencentCloudKMSFunc(configKMS, opts...)
+
 	case wrapping.WrapperTypeTransit:
 		wrapper, kmsInfo, err = GetTransitKMSFunc(configKMS, opts...)
 
@@ -312,6 +316,23 @@ func GetOCIKMSKMSFunc(kms *KMS, opts ...wrapping.Option) (wrapping.Wrapper, map[
 		info["OCI KMS Crypto Endpoint"] = wrapperInfo.Metadata[ocikms.KmsConfigCryptoEndpoint]
 		info["OCI KMS Management Endpoint"] = wrapperInfo.Metadata[ocikms.KmsConfigManagementEndpoint]
 		info["OCI KMS Principal Type"] = wrapperInfo.Metadata["principal_type"]
+	}
+	return wrapper, info, nil
+}
+
+func GetTencentCloudKMSFunc(kms *KMS, opts ...wrapping.Option) (wrapping.Wrapper, map[string]string, error) {
+	wrapper := tencentcloudkms.NewWrapper()
+	wrapperInfo, err := wrapper.SetConfig(context.Background(), append(opts, wrapping.WithConfigMap(kms.Config))...)
+	if err != nil {
+		// If the error is any other than logical.KeyNotFoundError, return the error
+		if !errwrap.ContainsType(err, new(logical.KeyNotFoundError)) {
+			return nil, nil, err
+		}
+	}
+	info := make(map[string]string)
+	if wrapperInfo != nil {
+		info["TencentCloud KMS Region"] = wrapperInfo.Metadata["project"]
+		info["TencentCloud KMS KeyID"] = wrapperInfo.Metadata["region"]
 	}
 	return wrapper, info, nil
 }

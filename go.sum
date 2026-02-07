@@ -711,6 +711,8 @@ github.com/openbao/go-kms-wrapping/wrappers/pkcs11/v2 v2.5.1 h1:RlHxh3QU9qjhw86p
 github.com/openbao/go-kms-wrapping/wrappers/pkcs11/v2 v2.5.1/go.mod h1:nlp9DTlZJai6Zr4No0frVgqnFJRKwbJ+P/mA5v1OKvU=
 github.com/openbao/go-kms-wrapping/wrappers/static/v2 v2.1.1 h1:HalROTEenmp6RBb2Ocf5Hf0zXdNYVXdRteK9pW3IPVI=
 github.com/openbao/go-kms-wrapping/wrappers/static/v2 v2.1.1/go.mod h1:Aut6ban+gTuKTGjMjcigV1VY3wpWYdBt5wgmCuJ8LG8=
+github.com/openbao/go-kms-wrapping/wrappers/tencentcloudkms/v2 v2.2.0 h1:0oPSrwvuUnBEROeOV0nxOUsr/z3GJxtTjUtIPQudHfw=
+github.com/openbao/go-kms-wrapping/wrappers/tencentcloudkms/v2 v2.2.0/go.mod h1:57xSyqrm6kFJKZ7csY9Y4D5E/7x3FqsfSE4NoIf++24=
 github.com/openbao/go-kms-wrapping/wrappers/transit/v2 v2.7.0 h1:oEIEyXh0yHZ2175c093cCpcZAxScNzf0OTKKmcoJ07Y=
 github.com/openbao/go-kms-wrapping/wrappers/transit/v2 v2.7.0/go.mod h1:FHaEf2gA0t5nf5b1SMbWIblhi8i3xCQ5tAtspWTMI70=
 github.com/openbao/openbao-template v1.0.1 h1:p3K6HWA19H8oJFgK2sSMMpaWWB3dq010oxlvkvRzEcU=
@@ -869,10 +871,13 @@ github.com/stretchr/testify v1.8.1/go.mod h1:w2LPCIKwWwSfY2zedu0+kehJoqGctiVI29o
 github.com/stretchr/testify v1.8.2/go.mod h1:w2LPCIKwWwSfY2zedu0+kehJoqGctiVI29o6fzry7u4=
 github.com/stretchr/testify v1.11.1 h1:7s2iGBzp5EwR7/aIZr8ao5+dra3wiQyKjjFuvgVKu7U=
 github.com/stretchr/testify v1.11.1/go.mod h1:wZwfW3scLgRK+23gO65QZefKpKQRnfz6sD981Nm4B6U=
-github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/common v1.0.480 h1:Dwnfdrk3KXpYRH9Kwrk9sHpZSOmrE7P9LBoNsYUJKR4=
 github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/common v1.0.480/go.mod h1:7sCQWVkxcsR38nffDW057DRGk8mUjK1Ing/EFOK8s8Y=
+github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/common v1.0.604 h1:BiuYcs8fINjZT9omCf8tV+rZkrZdf+Hq4TMWUNqYNgY=
+github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/common v1.0.604/go.mod h1:7sCQWVkxcsR38nffDW057DRGk8mUjK1Ing/EFOK8s8Y=
 github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/cvm v1.0.480 h1:YEDZmv2ABU8QvwXEVTOQgVEQzDOByhz73vdjL6sERkE=
 github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/cvm v1.0.480/go.mod h1:zaBIuDDs+rC74X8Aog+LSu91GFtHYRYDC196RGTm2jk=
+github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/kms v1.0.604 h1:LItsuG1cD+8e/9Z5MBNci2WJpYeNI0j00FN8UU5A3xw=
+github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/kms v1.0.604/go.mod h1:0NPGaAgj1qcvy3w0wEVhe3hMmDB0ptM+CqzXDu9r658=
 github.com/tilinna/clock v1.0.2 h1:6BO2tyAC9JbPExKH/z9zl44FLu1lImh3nDNKA0kgrkI=
 github.com/tilinna/clock v1.0.2/go.mod h1:ZsP7BcY7sEEz7ktc0IVy8Us6boDrK8VradlKRUGfOao=
 github.com/tink-crypto/tink-go/v2 v2.6.0 h1:+KHNBHhWH33Vn+igZWcsgdEPUxKwBMEe0QC60t388v4=
